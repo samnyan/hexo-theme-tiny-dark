@@ -1,0 +1,18 @@
+<header id="header">
+  <div class="wrap">
+    <h1 id="logo">
+      <a href="<%- url_for() %>"><%= config.title %></a>
+    </h1>
+
+    <div id="header-sns">
+      <ul>
+        <% if (theme.rss){ %>
+          <a id="nav-rss-link" class="nav-icon" href="<%- url_for(theme.rss) %>" title="<%= __('rss_feed') %>"></a>
+        <% } %>
+          <% if (theme.twitter){ %>
+            <a id="nav-rss-link" class="nav-icon" href="<%- url_for(theme.twitter) %>" title="<%= __('twitter') %>"></a>
+          <% } %>
+      </ul>
+    </div>
+  </div>
+</header>

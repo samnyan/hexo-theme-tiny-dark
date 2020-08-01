@@ -1,0 +1,72 @@
+@import "nib"
+@import "_variables"
+
+global-reset()
+
+input, button
+  margin: 0
+  padding: 0
+  &::-moz-focus-inner
+    border: 0
+    padding: 0
+
+@font-face
+  font-family: FontAwesome
+  font-style: normal
+  font-weight: normal
+  src: url(font-icon-path + ".eot?v=#" + font-icon-version)
+  src: url(font-icon-path + ".eot?#iefix&v=#" + font-icon-version) format("embedded-opentype"),
+       url(font-icon-path + ".woff?v=#" + font-icon-version) format("woff"),
+       url(font-icon-path + ".ttf?v=#" + font-icon-version) format("truetype"),
+       url(font-icon-path + ".svg#fontawesomeregular?v=#" + font-icon-version) format("svg")
+
+html, body, #container
+  height: 100%
+
+body
+  background: color-background
+  font: font-size fonts
+  -webkit-text-size-adjust: 100%
+  color: color-text
+  margin: 0;
+
+.wrap
+  width: 1200px
+  box-sizing: border-box
+  margin: 0 auto
+
+a
+  text-decoration: none
+  color: color-link
+  text-shadow: 0 0 2px
+
+a:hover
+  text-shadow: 0 0 5px
+
+//Layout
+#content
+  padding-top: 52px
+  display: grid
+  grid-template-columns: auto 290px
+  grid-template-rows: auto
+  grid-template-areas: "main sidebar"
+
+
+#main
+  grid-area: main
+  width: 100%
+
+#sidebar
+  grid-area: sidebar
+  margin: 0 32px
+
+@import "_extend"
+@import "_partial/header"
+@import "_partial/article"
+@import "_partial/comment"
+@import "_partial/archive"
+@import "_partial/footer"
+@import "_partial/highlight"
+@import "_partial/mobile"
+
+@import "_partial/sidebar"
