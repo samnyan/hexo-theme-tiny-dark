@@ -1,27 +1,13 @@
-.archives-wrap
-  margin: block-margin 0
-
 .archives
   clearfix()
 
-.archive-year-wrap
-  margin-bottom: 1em
-
-.archive-year
-  @extend $block-caption
-
 .archives
-  column-gap: 10px
-  @media mq-tablet
-    column-count: 2
-  @media mq-normal
-    column-count: 3
+  padding: 0 article-padding
 
 .archive-article
   avoid-column-break()
 
 .archive-article-inner
-  @extend $block
   padding: 10px
   margin-bottom: 15px
 
@@ -29,7 +15,6 @@
   text-decoration: none
   font-weight: bold
   color: color-default
-  transition: color 0.2s
   line-height: line-height
   &:hover
     color: color-link
@@ -48,19 +33,18 @@
 #page-nav
   clearfix()
   margin: block-margin auto
-  background: #fff
-  box-shadow: 1px 2px 3px #ddd
+  background: color-main-background
   border: 1px solid color-border
-  border-radius: 3px
+  border-radius: border-radius
   text-align: center
-  color: color-grey
+  color: color-text
   overflow: hidden
   a, span
     padding: 10px 20px
     line-height: 1
     height: 2ex
   a
-    color: color-grey
+    color: color-link
     text-decoration: none
     &:hover
       background: color-grey
