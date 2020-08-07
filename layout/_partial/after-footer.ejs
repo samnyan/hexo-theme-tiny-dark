@@ -13,3 +13,11 @@
   })();
 </script>
 <% } %>
+
+<script>
+    function updateMaxSize() {
+        document.getElementById('main').setAttribute('style', 'max-width: ' + window.outerWidth + 'px;')
+    }
+    window.onload = updateMaxSize
+    window.onresize = updateMaxSize
+</script>

@@ -7,6 +7,8 @@
 
 .article-header
   padding: article-padding article-padding 0
+  @media mq-tablet
+    padding: article-padding mobile-article-padding 0
 
 .article-meta
   margin-top: 0
@@ -20,7 +22,6 @@
   padding-right: .6rem;
   transform: translateY(-.7rem);
   letter-spacing: 1px;
-
 
 .article-date
   float: left
@@ -37,6 +38,8 @@
   clearfix()
   color: color-default
   padding: 0 article-padding
+  @media mq-tablet
+    padding: 0 mobile-article-padding
   p, table
     line-height: line-height
     margin: line-height 0
@@ -134,6 +137,8 @@
   border-top: 1px solid color-border
   padding-top: line-height
   margin: 0 article-padding article-padding
+  @media mq-tablet
+    margin: 0 mobile-article-padding mobile-article-padding
   a
     color: color-grey
     text-decoration: none
@@ -150,10 +155,6 @@
 
 .article-comment-link
   float: right
-  &:before
-    content: "\f075"
-    font-family: font-icon
-    padding-right: 8px
 
 #article-nav
   clearfix()
@@ -168,6 +169,8 @@
   text-align: center
   display: block
   width: 50%
+  @media mq-tablet
+    width: 100%
   margin-top: 0
 
 

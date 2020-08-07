@@ -29,6 +29,8 @@ body
   width: 1200px
   box-sizing: border-box
   margin: 0 auto
+  @media mq-tablet
+    width: 100%
 
 a
   text-decoration: none
@@ -45,6 +47,10 @@ a:hover
   grid-template-columns: 910px 290px
   grid-template-rows: auto
   grid-template-areas: "main sidebar"
+  @media mq-tablet
+    grid-template-columns: auto
+    grid-template-rows: auto
+    grid-template-areas: "main" "sidebar"
 
 
 #main
